@@ -1,6 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ItemsModule } from './items/items.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Item } from './entities/item.entity';
+
 // const settings = require('../ormconfig.js');
 
 @Module({
@@ -14,13 +16,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       username: 'postgres',
       password: 'postgres',
       database: 'postgres',
-      // autoLoadEntities: true,
-      entities: ['../dist/entitiess/*.entity.js'],
-      migrations: ['../dist/migrationsss/*.js'],
-      cli: {
-        entitiesDir: 'entities',
-        migrationsDir: 'src/migrations',
-      },
+      autoLoadEntities: true,
+      entities: [Item],
+      migrations: ['dist/migrations/*.js'],
     }),
   ],
   controllers: [],
