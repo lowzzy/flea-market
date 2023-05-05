@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ItemsModule } from './items/items.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Item } from './entities/item.entity';
+import { AuthModule } from './auth/auth.module';
 
 // const settings = require('../ormconfig.js');
 
@@ -20,6 +21,7 @@ import { Item } from './entities/item.entity';
       entities: [Item],
       migrations: ['dist/migrations/*.js'],
     }),
+    AuthModule,
   ],
   controllers: [],
   providers: [],
