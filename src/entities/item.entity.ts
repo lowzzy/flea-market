@@ -10,7 +10,7 @@ export class Item {
   name: string;
 
   @Column()
-  price: string;
+  price: number;
 
   @Column()
   description: string;

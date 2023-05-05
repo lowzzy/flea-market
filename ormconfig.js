@@ -5,7 +5,7 @@ module.exports = {
   username: 'postgres',
   password: 'postgres',
   database: 'postgres',
-  autoLoadEntities: true,
+  // autoLoadEntities: true,
   entities: ['dist/entities/*.entity.js'],
   migrations: ['dist/migrations/*.js'],
   cli: {
